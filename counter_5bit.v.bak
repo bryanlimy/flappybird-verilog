@@ -1,0 +1,12 @@
+module counter_5bit (clk, enable, reset, out);
+	input clk, enable, reset;
+	output out;
+	
+	always @(posedge clk)
+	
+	if (reset) begin
+		out <= 5'b0;
+	end else if (enable) begin
+		out <= out + 1;
+	end
+endmodule
